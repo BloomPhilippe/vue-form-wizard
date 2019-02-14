@@ -85,11 +85,6 @@ export default {
         this.setActive(currentIdStep, false)
         this.steps[nextIndexStep].active = true
       }
-    },
-    setUrlStep: function (step) {
-      let query = Object.assign({}, this.$route.query)
-      query['step'] = step
-      this.$router.push({name: this.$route.name, query: query })
     }
   },
   components: {
