@@ -9,7 +9,7 @@ Petit projet VueJs avec certains modules incomptournables :
 - VueI18n
 - VeeValidate
 
-Le but du projet est de montrer un formulaire avec plusieurs étapes avec VueJS.
+Le but du projet VueJS est de montrer un formulaire avec plusieurs étapes.
 
 ## Build Setup
 
