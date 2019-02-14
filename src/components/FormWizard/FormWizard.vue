@@ -20,6 +20,7 @@
       <div class="row d-flex justify-content-center">
         <div class="col-6 text-left">
           <input-simple v-bind:label="'Nom de la société'" v-bind:id="'societe'"></input-simple>
+          <text-area v-bind:label="'Description de fonction'" v-bind:id="'fonction'"></text-area>
         </div>
       </div>
     </step>
@@ -29,6 +30,7 @@
 <script>
 import Step from './Step'
 import InputSimple from '../FormElements/InputSimple'
+import TextArea from '../FormElements/TextArea'
 export default {
   props: {
   },
@@ -68,6 +70,8 @@ export default {
       if (nextIndexStep < this.steps.length) {
         this.setActive(currentIdStep, false)
         this.steps[nextIndexStep].active = true
+      } else {
+        console.log('Submit')
       }
     },
     prevStep: function (currentIdStep) {
@@ -87,7 +91,8 @@ export default {
   },
   components: {
     Step,
-    InputSimple
+    InputSimple,
+    TextArea
   }
 }
 </script>
