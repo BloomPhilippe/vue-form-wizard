@@ -17,6 +17,18 @@ export default new Vuex.Store({
     },
     lastName: function (state, payload) {
       state.lastName = payload
+    },
+    address: function (state, payload) {
+      state.address = payload
+    },
+    cp: function (state, payload) {
+      state.cp = payload
+    },
+    company: function (state, payload) {
+      state.company = payload
+    },
+    function: function (state, payload) {
+      state.function = payload
     }
   },
   getters: {
