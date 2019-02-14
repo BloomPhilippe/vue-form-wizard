@@ -3,11 +3,18 @@
     <step v-bind:active="isActive('details')" v-bind:id="'details'" v-bind:title="'Détails'" v-on:nextStep="nextStep($event)" v-on:prevStep="prevStep($event)">
       <div class="row d-flex justify-content-center">
         <div class="col-6 text-left">
-          <input-simple v-bind:label="'Nom'" v-bind:id="'Nom de famille'"></input-simple>
+          <input-simple v-bind:label="'Nom'" v-bind:id="'nom'"></input-simple>
+          <input-simple v-bind:label="'Prénom'" v-bind:id="'prenom'"></input-simple>
         </div>
       </div>
     </step>
     <step v-bind:active="isActive('address')" v-bind:id="'address'" v-bind:title="'Adresse'" v-on:nextStep="nextStep($event)" v-on:prevStep="prevStep($event)">
+      <div class="row d-flex justify-content-center">
+        <div class="col-6 text-left">
+          <input-simple v-bind:label="'Adresse'" v-bind:id="'adresse'"></input-simple>
+          <input-simple v-bind:label="'CP'" v-bind:id="'cp'"></input-simple>
+        </div>
+      </div>
     </step>
   </div>
 </template>

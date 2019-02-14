@@ -25,7 +25,7 @@ export default {
     },
     placeholder: {
       type: String,
-      default: 'Enter ...'
+      default: 'Veuillez remplir ce champ...'
     }
   },
   data () {
