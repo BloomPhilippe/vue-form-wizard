@@ -2,6 +2,15 @@
 
 > Form wizard with VueJs
 
+Petit projet VueJs avec certains modules incomptournables :
+
+- Vuex
+- BootstrapVue
+- VueI18n
+- VeeValidate
+
+Le but du projet est de montrer un formulaire avec plusieurs étapes avec VueJS.
+
 ## Build Setup
 
 ``` bash
