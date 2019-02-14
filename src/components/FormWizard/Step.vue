@@ -4,10 +4,10 @@
     <slot>Content not found</slot>
     <div class="row d-flex justify-content-center">
       <div class="col-2">
-        <b-button variant="success" @click="previous">Précédent</b-button>
+        <b-button variant="success" @click="previous">{{labelForPrevious}}</b-button>
       </div>
       <div class="col-2">
-        <b-button variant="success" @click="next">Suivant</b-button>
+        <b-button variant="success" @click="next">{{labelForNext}}</b-button>
       </div>
     </div>
   </div>
@@ -28,6 +28,14 @@ export default {
     title: {
       type: String,
       required: true
+    },
+    labelForNext: {
+      type: String,
+      default: 'Suivant'
+    },
+    labelForPrevious: {
+      type: String,
+      default: 'Précédent'
     }
   },
   data () {
