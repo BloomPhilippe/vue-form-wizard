@@ -16,6 +16,13 @@
         </div>
       </div>
     </step>
+    <step v-bind:active="isActive('job')" v-bind:id="'job'" v-bind:title="'Job'" v-bind:labelForNext="'Terminer'" v-on:nextStep="nextStep($event)" v-on:prevStep="prevStep($event)">
+      <div class="row d-flex justify-content-center">
+        <div class="col-6 text-left">
+          <input-simple v-bind:label="'Nom de la société'" v-bind:id="'societe'"></input-simple>
+        </div>
+      </div>
+    </step>
   </div>
 </template>
 
@@ -34,6 +41,10 @@ export default {
         },
         {
           id: 'address',
+          active: false
+        },
+        {
+          id: 'job',
           active: false
         }
       ]
