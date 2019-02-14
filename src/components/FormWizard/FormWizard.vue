@@ -1,6 +1,11 @@
 <template>
   <div>
     <step v-bind:active="isActive('details')" v-bind:id="'details'" v-bind:title="'Détails'" v-on:nextStep="nextStep($event)" v-on:prevStep="prevStep($event)">
+      <div class="row d-flex justify-content-center">
+        <div class="col-6 text-left">
+          <input-simple v-bind:label="'Nom'" v-bind:id="'Nom de famille'"></input-simple>
+        </div>
+      </div>
     </step>
     <step v-bind:active="isActive('address')" v-bind:id="'address'" v-bind:title="'Adresse'" v-on:nextStep="nextStep($event)" v-on:prevStep="prevStep($event)">
     </step>
@@ -9,6 +14,7 @@
 
 <script>
 import Step from './Step'
+import InputSimple from '../FormElements/InputSimple'
 export default {
   props: {
   },
@@ -62,7 +68,8 @@ export default {
     }
   },
   components: {
-    Step
+    Step,
+    InputSimple
   }
 }
 </script>
