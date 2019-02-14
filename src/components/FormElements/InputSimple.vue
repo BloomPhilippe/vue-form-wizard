@@ -1,18 +1,24 @@
 <template>
   <div class="form-group">
     <label :for="internalId">{{label}}</label>
-    <input :type="type" class="form-control" :id="internalId" :placeholder="placeholder">
+    <input v-on:blur="focusOut()" :type="type" class="form-control" :id="internalId" :placeholder="placeholder" v-model="value">
   </div>
 </template>
 
 <script>
+import FormStore from '../../store/FormStore'
 export default {
+  store: FormStore,
   props: {
     label: {
       type: String,
       required: true
     },
     id: {
+      type: String,
+      required: true
+    },
+    storeKey: {
       type: String,
       required: true
     },
@@ -35,6 +41,9 @@ export default {
     }
   },
   methods: {
+    focusOut: function () {
+      this.$store.commit(this.storeKey, this.value)
+    }
   },
   components: {},
   created: function () {

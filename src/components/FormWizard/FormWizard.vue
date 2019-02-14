@@ -3,24 +3,24 @@
     <step v-bind:active="isActive('details')" v-bind:id="'details'" v-bind:title="'Détails'" v-on:nextStep="nextStep($event)" v-on:prevStep="prevStep($event)">
       <div class="row d-flex justify-content-center">
         <div class="col-6 text-left">
-          <input-simple v-bind:label="'Nom'" v-bind:id="'nom'"></input-simple>
-          <input-simple v-bind:label="'Prénom'" v-bind:id="'prenom'"></input-simple>
+          <input-simple v-bind:label="'Nom'" v-bind:id="'lastname'" v-bind:storeKey="'lastName'"></input-simple>
+          <input-simple v-bind:label="'Prénom'" v-bind:id="'firstname'" v-bind:storeKey="'firstName'"></input-simple>
         </div>
       </div>
     </step>
     <step v-bind:active="isActive('address')" v-bind:id="'address'" v-bind:title="'Adresse'" v-on:nextStep="nextStep($event)" v-on:prevStep="prevStep($event)">
       <div class="row d-flex justify-content-center">
         <div class="col-6 text-left">
-          <input-simple v-bind:label="'Adresse'" v-bind:id="'adresse'"></input-simple>
-          <input-simple v-bind:label="'CP'" v-bind:id="'cp'"></input-simple>
+          <input-simple v-bind:label="'Adresse'" v-bind:id="'address'" v-bind:storeKey="'address'"></input-simple>
+          <input-simple v-bind:label="'CP'" v-bind:id="'cp'" v-bind:storeKey="'cp'"></input-simple>
         </div>
       </div>
     </step>
     <step v-bind:active="isActive('job')" v-bind:id="'job'" v-bind:title="'Job'" v-bind:labelForNext="'Terminer'" v-on:nextStep="nextStep($event)" v-on:prevStep="prevStep($event)">
       <div class="row d-flex justify-content-center">
         <div class="col-6 text-left">
-          <input-simple v-bind:label="'Nom de la société'" v-bind:id="'societe'"></input-simple>
-          <text-area v-bind:label="'Description de fonction'" v-bind:id="'fonction'"></text-area>
+          <input-simple v-bind:label="'Nom de la société'" v-bind:id="'company'" v-bind:storeKey="'company'"></input-simple>
+          <text-area v-bind:label="'Description de fonction'" v-bind:id="'function'" v-bind:storeKey="'function'"></text-area>
         </div>
       </div>
     </step>
@@ -31,7 +31,9 @@
 import Step from './Step'
 import InputSimple from '../FormElements/InputSimple'
 import TextArea from '../FormElements/TextArea'
+import FormStore from '../../store/FormStore'
 export default {
+  store: FormStore,
   props: {
   },
   data () {
@@ -72,6 +74,7 @@ export default {
         this.steps[nextIndexStep].active = true
       } else {
         console.log('Submit')
+        console.log(this.$store.state)
       }
     },
     prevStep: function (currentIdStep) {

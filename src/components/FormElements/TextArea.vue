@@ -6,7 +6,9 @@
 </template>
 
 <script>
+import FormStore from '../../store/FormStore'
 export default {
+  store: FormStore,
   props: {
     label: {
       type: String,
@@ -28,6 +30,9 @@ export default {
     }
   },
   methods: {
+    focusOut: function () {
+      this.$store.commit(this.storeKey, this.value)
+    }
   },
   components: {},
   created: function () {
