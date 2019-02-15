@@ -1,6 +1,6 @@
 <template>
   <div>
-    <step v-bind:active="isActive('details')" v-bind:id="'details'" v-bind:title="$t('details')" v-on:nextStep="nextStep($event)" v-on:prevStep="prevStep($event)">
+    <step v-bind:active="isActive('details')" v-bind:id="'details'" v-bind:title="$t('details')" v-bind:labelForNext="$t('next')" v-bind:label-for-previous="$t('previous')" v-on:nextStep="nextStep($event)" v-on:prevStep="prevStep($event)">
       <div class="row d-flex justify-content-center">
         <div class="col-6 text-left">
           <input-simple v-bind:label="$t('lastName')" v-bind:id="'lastname'" v-bind:storeKey="'lastName'"></input-simple>
@@ -8,7 +8,7 @@
         </div>
       </div>
     </step>
-    <step v-bind:active="isActive('address')" v-bind:id="'address'" v-bind:title="$t('address')" v-on:nextStep="nextStep($event)" v-on:prevStep="prevStep($event)">
+    <step v-bind:active="isActive('address')" v-bind:id="'address'" v-bind:title="$t('address')" v-bind:labelForNext="$t('next')" v-bind:label-for-previous="$t('previous')" v-on:nextStep="nextStep($event)" v-on:prevStep="prevStep($event)">
       <div class="row d-flex justify-content-center">
         <div class="col-6 text-left">
           <input-simple v-bind:label="$t('address')" v-bind:id="'address'" v-bind:storeKey="'address'"></input-simple>
@@ -16,7 +16,7 @@
         </div>
       </div>
     </step>
-    <step v-bind:active="isActive('job')" v-bind:id="'job'" v-bind:title="$t('job')" v-bind:labelForNext="$t('completed')" v-on:nextStep="nextStep($event)" v-on:prevStep="prevStep($event)">
+    <step v-bind:active="isActive('job')" v-bind:id="'job'" v-bind:title="$t('job')" v-bind:labelForNext="$t('completed')" v-bind:label-for-previous="$t('previous')" v-on:nextStep="nextStep($event)" v-on:prevStep="prevStep($event)">
       <div class="row d-flex justify-content-center">
         <div class="col-6 text-left">
           <input-simple v-bind:label="$t('companyName')" v-bind:id="'company'" v-bind:storeKey="'company'"></input-simple>
