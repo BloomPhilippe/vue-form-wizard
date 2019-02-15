@@ -1,4 +1,6 @@
 {
+  "details": "Details",
+  "job": "Job",
   "firstName": "Firstname",
   "lastName": "Lastname",
   "address": "Address",
