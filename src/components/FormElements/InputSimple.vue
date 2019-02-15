@@ -30,8 +30,7 @@ export default {
       }
     },
     placeholder: {
-      type: String,
-      default: 'Veuillez remplir ce champ...'
+      type: String
     }
   },
   data () {

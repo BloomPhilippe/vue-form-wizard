@@ -18,7 +18,6 @@
         <div class="container">
           <img src="./assets/logo.png">
           <h1 class="display-3">Form Wizard</h1>
-          <p>{{ $t('details') }}</p>
         </div>
       </div>
       <router-view/>
