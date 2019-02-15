@@ -11,6 +11,8 @@ Petit projet VueJs avec certains modules incomptournables :
 
 Le but du projet VueJS est de montrer un formulaire avec plusieurs étapes.
 
+[Voir la demo](https://bloomphilippe.github.io/projets/vue-form-wizard/)
+
 ## Build Setup
 
 ``` bash
