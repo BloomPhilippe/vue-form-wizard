@@ -2,9 +2,7 @@
   <div id="app" v-if="load_trad">
       <b-navbar toggleable="lg" type="dark" variant="info" fixed="top">
         <b-navbar-brand href="#">Form Wizard</b-navbar-brand>
-
         <b-navbar-toggle target="nav_collapse" />
-
         <b-collapse is-nav id="nav_collapse">
           <!-- Right aligned nav items -->
           <b-navbar-nav class="ml-auto">
