@@ -1,1 +1,12 @@
-{}
+{
+  "firstName": "Firstname",
+  "lastName": "Lastname",
+  "address": "Address",
+  "zipCode": "Zip code",
+  "companyName": "Company",
+  "jobDescription": "Job description",
+  "defaultPlaceholder": "Please fill in this field...",
+  "next": "Next",
+  "previous": "Previous",
+  "completed": "Completed"
+}

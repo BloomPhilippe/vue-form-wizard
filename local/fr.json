@@ -1,3 +1,12 @@
 {
-
+  "firstName": "Prénom",
+  "lastName": "Nom",
+  "address": "Adresse",
+  "zipCode": "CP",
+  "companyName": "Nom de la société",
+  "jobDescription": "Description de fonction",
+  "defaultPlaceholder": "Veuillez remplir ce champ...",
+  "next": "Suivant",
+  "previous": "Précédent",
+  "completed": "Terminé"
 }
