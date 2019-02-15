@@ -1,6 +1,6 @@
 <template>
   <div id="app" v-if="load_trad">
-      <b-navbar toggleable="lg" type="dark" variant="info" fixed="top">
+      <b-navbar toggleable="lg" type="dark" variant="dark" fixed="top">
         <b-navbar-brand href="#">Form Wizard</b-navbar-brand>
         <b-navbar-toggle target="nav_collapse" />
         <b-collapse is-nav id="nav_collapse">
