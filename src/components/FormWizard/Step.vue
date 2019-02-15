@@ -31,11 +31,11 @@ export default {
     },
     labelForNext: {
       type: String,
-      default: 'Suivant'
+      default: null
     },
     labelForPrevious: {
       type: String,
-      default: 'Précédent'
+      default: null
     }
   },
   data () {
@@ -51,6 +51,8 @@ export default {
   },
   components: {},
   created: function () {
+    this.labelForNext = this.labelForNext === null ? this.$i18n.messages[this.$i18n.locale].next : this.labelForNext
+    this.labelForPrevious = this.labelForPrevious === null ? this.$i18n.messages[this.$i18n.locale].previous : this.labelForPrevious
   }
 }
 </script>
