@@ -5,7 +5,7 @@
       <h4 class="alert-heading">{{$t('successTitle')}}</h4>
       <p>{{$t('successText')}}</p>
     </div>
-    <button type="button" class="btn btn-outline-success btn-lg" @click="location.reload()">{{$t('restart')}}</button>
+    <button type="button" class="btn btn-outline-success btn-lg" @click="restart()">{{$t('restart')}}</button>
   </div>
 </template>
 
@@ -16,6 +16,11 @@ export default {
   name: 'Result',
   data () {
     return {
+    }
+  },
+  methods: {
+    restart: function () {
+      location.replace('/')
     }
   },
   components: {
