@@ -3,15 +3,15 @@
     <h3>{{title}}</h3>
     <slot>Content not found</slot>
     <div class="row d-flex justify-content-center">
-      <div class="col-12 text-left">
+      <div class="col-12 text-left" style="margin-bottom: 10px">
         <div class="alert alert-danger" role="alert" v-if="hasError">
           {{$t('hasError')}}
         </div>
       </div>
-      <div class="col-2" v-if="showPrevious">
+      <div class="col" v-if="showPrevious">
         <b-button variant="success" @click="previous">{{labelForPrevious}}</b-button>
       </div>
-      <div class="col-2" v-if="showNext">
+      <div class="col" v-if="showNext">
         <b-button variant="success" @click="next">{{labelForNext}}</b-button>
       </div>
     </div>
