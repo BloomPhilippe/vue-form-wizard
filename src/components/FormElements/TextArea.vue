@@ -1,7 +1,7 @@
 <template>
   <div class="form-group">
     <label :for="internalId">{{label}}</label>
-    <textarea class="form-control" :id="internalId" :placeholder="placeholder" rows="3"></textarea>
+    <textarea v-on:blur="focusOut()" class="form-control" :id="internalId" :placeholder="placeholder" v-model="value" rows="3"></textarea>
   </div>
 </template>
 
@@ -15,6 +15,10 @@ export default {
       required: true
     },
     id: {
+      type: String,
+      required: true
+    },
+    storeKey: {
       type: String,
       required: true
     },

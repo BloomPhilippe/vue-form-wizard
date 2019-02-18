@@ -1,6 +1,6 @@
 <template>
   <div>
-    <step v-bind:active="isActive('details')" v-bind:id="'details'" v-bind:title="$t('details')" v-bind:labelForNext="$t('next')" v-bind:label-for-previous="$t('previous')" v-on:nextStep="nextStep($event)" v-on:prevStep="prevStep($event)">
+    <step v-bind:active="isActive('details')" v-bind:id="'details'" v-bind:title="$t('details')" v-bind:labelForNext="$t('next')" v-bind:show-previous="false" v-on:nextStep="nextStep($event)" v-on:prevStep="prevStep($event)">
       <div class="row d-flex justify-content-center">
         <div class="col-6 text-left">
           <input-simple v-bind:label="$t('lastName')" v-bind:id="'lastname'" v-bind:storeKey="'lastName'"></input-simple>
@@ -32,6 +32,8 @@ import Step from './Step'
 import InputSimple from '../FormElements/InputSimple'
 import TextArea from '../FormElements/TextArea'
 import FormStore from '../../store/FormStore'
+import {userApi} from '../../api/user'
+
 export default {
   store: FormStore,
   props: {
@@ -73,8 +75,12 @@ export default {
         this.setActive(currentIdStep, false)
         this.steps[nextIndexStep].active = true
       } else {
-        console.log('Submit')
-        console.log(this.$store.state)
+        userApi.get().then(response => {
+          response.body.users.push(this.$store.state)
+          userApi.insert(response.body.users).then(response => {
+            console.log(response)
+          })
+        })
       }
     },
     prevStep: function (currentIdStep) {

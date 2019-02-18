@@ -3,10 +3,10 @@
     <h3>{{title}}</h3>
     <slot>Content not found</slot>
     <div class="row d-flex justify-content-center">
-      <div class="col-2">
+      <div class="col-2" v-if="showPrevious">
         <b-button variant="success" @click="previous">{{labelForPrevious}}</b-button>
       </div>
-      <div class="col-2">
+      <div class="col-2" v-if="showNext">
         <b-button variant="success" @click="next">{{labelForNext}}</b-button>
       </div>
     </div>
@@ -36,6 +36,14 @@ export default {
     labelForPrevious: {
       type: String,
       default: null
+    },
+    showNext: {
+      type: Boolean,
+      default: true
+    },
+    showPrevious: {
+      type: Boolean,
+      default: true
     }
   },
   data () {
