@@ -5,6 +5,11 @@
         <span class="sr-only">Loading...</span>
       </div>
     </div>
+    <div class="row step-bullet">
+      <div class="bullet" v-for="(step, index) in steps" v-bind:key="index" :class="{'active': step.active}">
+        {{index+1}}
+      </div>
+    </div>
     <step v-bind:active="isActive('details')" v-bind:id="'details'" v-bind:title="$t('details')" v-bind:labelForNext="$t('next')" v-bind:show-previous="false" v-on:nextStep="nextStep($event)" v-on:prevStep="prevStep($event)">
       <div class="row d-flex justify-content-center">
         <div class="col-6 text-left">
