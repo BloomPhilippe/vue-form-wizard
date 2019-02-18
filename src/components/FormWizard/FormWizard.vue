@@ -6,8 +6,10 @@
       </div>
     </div>
     <div class="row step-bullet">
-      <div class="bullet" v-for="(step, index) in steps" v-bind:key="index" :class="{'active': step.active}">
-        {{index+1}}
+      <div class="col" v-for="(step, index) in steps" v-bind:key="index">
+        <div class="bullet" :class="{'active': step.active}">
+          {{index+1}}
+        </div>
       </div>
     </div>
     <step v-bind:active="isActive('details')" v-bind:id="'details'" v-bind:title="$t('details')" v-bind:labelForNext="$t('next')" v-bind:show-previous="false" v-on:nextStep="nextStep($event)" v-on:prevStep="prevStep($event)">
