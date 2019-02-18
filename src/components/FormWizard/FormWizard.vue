@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <step v-bind:active="isActive('details')" v-bind:id="'details'" v-bind:title="$t('details')" v-bind:labelForNext="$t('next')" v-bind:show-previous="false" v-on:nextStep="nextStep($event)" v-on:prevStep="prevStep($event)">
       <div class="row d-flex justify-content-center">
         <div class="col-6 text-left">

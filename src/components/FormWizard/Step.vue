@@ -3,6 +3,11 @@
     <h3>{{title}}</h3>
     <slot>Content not found</slot>
     <div class="row d-flex justify-content-center">
+      <div class="col-12 text-left">
+        <div class="alert alert-danger" role="alert" v-if="hasError">
+          {{$t('hasError')}}
+        </div>
+      </div>
       <div class="col-2" v-if="showPrevious">
         <b-button variant="success" @click="previous">{{labelForPrevious}}</b-button>
       </div>
@@ -15,6 +20,7 @@
 
 <script>
 export default {
+  inject: ['$validator'],
   props: {
     active: {
       type: Boolean,
@@ -47,11 +53,20 @@ export default {
     }
   },
   data () {
-    return {}
+    return {
+      hasError: false
+    }
   },
   methods: {
     next: function () {
-      this.$emit('nextStep', this.id)
+      this.hasError = false
+      this.$validator.validateAll().then((result) => {
+        if (result) {
+          this.$emit('nextStep', this.id)
+        } else {
+          this.hasError = true
+        }
+      })
     },
     previous: function () {
       this.$emit('prevStep', this.id)

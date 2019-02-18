@@ -1,0 +1,38 @@
+{
+  "fr": {
+    "hasError": "Certains champs obligatoires sont manquants, vides ou de mauvais format",
+    "restart": "Recommencer",
+    "completed": "Terminé",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "defaultPlaceholder": "Veuillez remplir ce champ...",
+    "jobDescription": "Description de fonction",
+    "companyName": "Nom de la société",
+    "zipCode": "CP",
+    "address": "Adresse",
+    "lastName": "Nom",
+    "firstName": "Prénom",
+    "job": "Job",
+    "details": "Détails",
+    "successText": "Votre inscription a bien été sauvée",
+    "successTitle": "Bien joué!"
+  },
+  "en": {
+    "hasError": "Some required fields are missing, empty or in bad format",
+    "restart": "Restart",
+    "completed": "Completed",
+    "previous": "Previous",
+    "next": "Next",
+    "defaultPlaceholder": "Please fill in this field...",
+    "jobDescription": "Job description",
+    "companyName": "Company",
+    "zipCode": "Zip code",
+    "address": "Address",
+    "lastName": "Lastname",
+    "firstName": "Firstname",
+    "job": "Job",
+    "details": "Details",
+    "successText": "Your registration has been saved",
+    "successTitle": "Well done!"
+  }
+}

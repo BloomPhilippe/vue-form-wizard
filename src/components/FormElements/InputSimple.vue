@@ -1,13 +1,14 @@
 <template>
   <div class="form-group">
     <label :for="internalId">{{label}}</label>
-    <input v-on:blur="focusOut()" :type="type" class="form-control" :id="internalId" :placeholder="placeholder" v-model="value">
+    <input v-validate="'required'" v-on:blur="focusOut()" :type="type" class="form-control" :id="internalId" :placeholder="placeholder" v-model="value">
   </div>
 </template>
 
 <script>
 import FormStore from '../../store/FormStore'
 export default {
+  inject: ['$validator'],
   store: FormStore,
   props: {
     label: {

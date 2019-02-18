@@ -5,7 +5,7 @@ Vue.use(VueResource)
 
 class TranslateApi {
   get () {
-    return Vue.http.get(apiURL + '/b/5c673ad8a83a2931773595b7/1', {
+    return Vue.http.get(apiURL + '/b/5c673ad8a83a2931773595b7/2', {
       headers: {
         'secret-key': apiKey
       }
