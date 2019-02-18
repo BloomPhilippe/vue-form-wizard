@@ -65,4 +65,15 @@ export default {
     text-align: center;
     color: #2c3e50;
   }
+  .loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255, 0.8);
+    background-size: cover;
+    z-index: 2;
+  }
 </style>

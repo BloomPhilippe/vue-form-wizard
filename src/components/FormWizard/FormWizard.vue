@@ -1,5 +1,10 @@
 <template>
-  <div class="container">
+  <div class="container" style="position: relative">
+    <div class="loader" v-if="loader">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
     <step v-bind:active="isActive('details')" v-bind:id="'details'" v-bind:title="$t('details')" v-bind:labelForNext="$t('next')" v-bind:show-previous="false" v-on:nextStep="nextStep($event)" v-on:prevStep="prevStep($event)">
       <div class="row d-flex justify-content-center">
         <div class="col-6 text-left">
@@ -40,6 +45,7 @@ export default {
   },
   data () {
     return {
+      loader: false,
       steps: [
         {
           id: 'details',
@@ -75,11 +81,13 @@ export default {
         this.setActive(currentIdStep, false)
         this.steps[nextIndexStep].active = true
       } else {
+        this.loader = true
         userApi.get().then(response => {
           response.body.users.push(this.$store.state)
           userApi.insert(response.body.users).then(response => {
             console.log(response)
             let path = this.$i18n.locale === 'fr' ? '/succes' : '/success'
+            this.loader = false
             this.$router.push(path)
           })
         })
