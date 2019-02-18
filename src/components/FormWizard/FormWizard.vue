@@ -79,6 +79,8 @@ export default {
           response.body.users.push(this.$store.state)
           userApi.insert(response.body.users).then(response => {
             console.log(response)
+            let path = this.$i18n.locale === 'fr' ? '/succes' : '/success'
+            this.$router.push(path)
           })
         })
       }

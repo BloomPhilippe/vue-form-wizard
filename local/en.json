@@ -1,4 +1,6 @@
 {
+  "successTitle": "Well done!",
+  "successText": "Your registration has been saved",
   "details": "Details",
   "job": "Job",
   "firstName": "Firstname",

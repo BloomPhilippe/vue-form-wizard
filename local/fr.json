@@ -1,4 +1,6 @@
 {
+  "successTitle": "Bien joué!",
+  "successText": "Votre inscription a bien été sauvée",
   "details": "Détails",
   "job": "Job",
   "firstName": "Prénom",
