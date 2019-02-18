@@ -5,6 +5,7 @@
       <h4 class="alert-heading">{{$t('successTitle')}}</h4>
       <p>{{$t('successText')}}</p>
     </div>
+    <button type="button" class="btn btn-outline-success btn-lg">{{$t('restart')}}</button>
   </div>
 </template>
 
