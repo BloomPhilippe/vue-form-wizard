@@ -2,18 +2,35 @@
 
 > Form wizard with VueJs
 
-Petit projet VueJs avec certains modules incomptournables :
+Le but du projet VueJS est de montrer un formulaire avec plusieurs étapes avec traduction, validation...
+
+Le projet est accompagné de certains modules incomptournables :
 
 - Vuex
+  
+  Il permet de centraliser la gestion de données (accesseurs, mutateurs) à travers les composants parents et enfants.
+  
 - BootstrapVue
+  
+  Librairie qui regroupe de nombreux outils bootstrap en VueJS
+
 - VueI18n
+
+  Permet la traduction du site
+  
 - VeeValidate
 
-Le but du projet VueJS est de montrer un formulaire avec plusieurs étapes.
+  Permet la validation de champs d'un formulaire. Il est basé sur le même principe que le module de validation de Laravel.
+
+
 
 [Voir la demo](https://bloomphilippe.github.io/projets/vue-form-wizard/)
 
+
+
 ## Build Setup
+
+Je n'ai pas encore écrit les tests.
 
 ``` bash
 # install dependencies
@@ -37,5 +54,3 @@ npm run e2e
 # run all tests
 npm test
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
