@@ -6,19 +6,19 @@ Le but du projet VueJS est de montrer un formulaire avec plusieurs étapes avec 
 
 Le projet est accompagné de certains modules incomptournables :
 
-- Vuex
+- [Vuex](https://vuex.vuejs.org/fr/)
   
   Il permet de centraliser la gestion de données (accesseurs, mutateurs) à travers les composants parents et enfants.
   
-- BootstrapVue
+- [BootstrapVue](https://bootstrap-vue.js.org/)
   
   Librairie qui regroupe de nombreux outils bootstrap en VueJS
 
-- VueI18n
+- [VueI18n](https://kazupon.github.io/vue-i18n/)
 
   Permet la traduction du site
   
-- VeeValidate
+- [VeeValidate](https://baianat.github.io/vee-validate/)
 
   Permet la validation de champs d'un formulaire. Il est basé sur le même principe que le module de validation de Laravel.
 
